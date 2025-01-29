@@ -28,14 +28,14 @@
             <button type="button" id="btn-search">Search</button>
 
              <div id="departure">
-               <input id="departure" type="text" placeholder=" Departure" />
+               <input name = "DepS" id="departure-search" type="text" placeholder=" Departure" required/>
              </div>
              <div id="arrival">
-               <input id="departure" type="text" placeholder=" Arrival" />
+               <input name = "ArrS" id="arrival-search" type="text" placeholder=" Arrival" required/>
              </div>
 
              <div id="date">
-               <input id="date" type="date" placeholder="" />
+               <input name = "DaS" id="date-search" type="date" placeholder="" required/>
           </div>
 
          </div>
@@ -43,6 +43,7 @@
          <div id="content-right">
             <img src="assets/train.png" alt="">
             <h4>It's time to book your future trip.</h4>
+            <ul id = "tripList"></ul>
         </div>
     </div>
 
