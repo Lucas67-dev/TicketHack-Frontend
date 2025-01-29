@@ -1,13 +1,16 @@
 body {
     margin: 0;
     background-color: #d0d0d0;
+    background-size:cover;
+    height: 80vh;
+    width: 100%;
 }
 
 h2 {
     margin: 0;
     color: #34a06f;
     font-family: sans-serif;
-    padding-left: 2%;
+    padding-left: 22%;
     padding-top: 2px;
     font-size: 25px;
 }
@@ -23,15 +26,16 @@ h5 {
 }
 
 #btn-cart {
-    margin-left: 1050px;
+    margin-left: 1150px;
     margin-top: 6px;
     background-color: #ffffff;
     border: #ffffff;
   }
 
-#btn-bookings {
+  #btn-bookings {
     float: right;
     margin-right: 50px;
+    margin-top: 6px;
     background-color: #ffffff;
     border: #ffffff;
 }
