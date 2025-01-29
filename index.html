@@ -30,8 +30,6 @@
 
     <div class="assets-list">
         <div id="content-left">
-            <button type="button" id="btn-search">Search</button>
-
              <div id="departure">
                <input name = "DepS" id="departure-search" type="text" placeholder=" Departure" required/>
              </div>
@@ -42,14 +40,20 @@
 
              <div id="date">
                <input name = "DaS" id="date-search" type="date" placeholder="" required/>
-          </div>
-
+            </div>
+            <button type="button" id="btn-search">Search</button>
          </div>
          
          <div id="content-right">
-            <img src="assets/train.png" alt="">
-            <h4>It's time to book your future trip.</h4>
-            <ul id = "tripList"></ul>
+            <img id = "trainImage" src="assets/train.png" alt="">
+            <h4 id = "future-trip-text">It's time to book your future trip.</h4>
+            <div id = "tripContainer">
+              <div class = "row">
+                <!-- <p>TEST TEXT</p>
+                <button type="button" class = "book">Book</button> -->
+              </div>
+            </div>
+  
         </div>
     </div>
 

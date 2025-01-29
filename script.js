@@ -1,4 +1,6 @@
-//const { response } = require("express");
+//const trainImage = document.querySelector("#trainImage");
+//const futureTrip = document.querySelector("#future-trip-text");
+const tripContainer = document.querySelector("#tripContainer");
 
 document.querySelector("#btn-search").addEventListener("click", function(){
     
@@ -6,19 +8,36 @@ document.querySelector("#btn-search").addEventListener("click", function(){
     const arrivalQuery = document.querySelector("#arrival-search").value;
     const dateQuery = document.querySelector("#date-search").value;
     
-    console.log(departureQuery);
-    console.log(arrivalQuery);
-    console.log(dateQuery);
-    //departure = departureQuery;
-    //arrival = arrivalQuery;
+    tripContainer.style.opacity = 1;
+    tripContainer.innerHTML = null;
+
     fetch(`http://localhost:3000/trips/${departureQuery}/${arrivalQuery}/${dateQuery}`)
     .then(response => response.json())
     .then(data => { 
-        for(let i = 0; i < data.length; i++)
+        
+        console.log(data);
+        if(data !== null)
         {
-            document.querySelector("#tripList").innerHTML += 
-            `<li>${data.departure} > ${data.arrival}   ${data.date}</li>`
+            for(let i = 0; i < data.trips.length; i++)
+            {
+                tripContainer.innerHTML += 
+                `<div class = "row">
+                    <p> ${data.trips[i].departure}  >  ${data.trips[i].arrival}</p>  
+                    <p>${data.trips[i].date.slice(14, 19)}</p>  
+                    <p>$${data.trips[i].price}</p>
+                    <button type="button" class = "book">Book</button>
+                </div>`;
+            }
         }
+        else{
+            tripContainer.innerHTML += 
+            `<div class = "column">
+                <img id = "notFound" src="assets/notfound.png" alt="">
+                <h4 id = "not-found-text">No trip found...</h4>
+            </div>`
+
+        }
+        
 
     })
 });
