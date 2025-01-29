@@ -16,14 +16,14 @@ document.querySelector("#btn-search").addEventListener("click", function(){
     .then(data => { 
         
         console.log(data);
-        if(data !== null)
+        if(data.trips.length != 0)
         {
             for(let i = 0; i < data.trips.length; i++)
             {
                 tripContainer.innerHTML += 
                 `<div class = "row">
                     <p> ${data.trips[i].departure}  >  ${data.trips[i].arrival}</p>  
-                    <p>${data.trips[i].date.slice(14, 19)}</p>  
+                    <p>${data.trips[i].date.slice(12, 16)}</p>  
                     <p>$${data.trips[i].price}</p>
                     <button type="button" class = "book">Book</button>
                 </div>`;

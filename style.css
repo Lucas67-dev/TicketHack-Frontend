@@ -135,6 +135,14 @@ h4 {
 
 }
 
+.column
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
 .book
 {
     padding: 17px;
@@ -190,4 +198,20 @@ h4 {
     border-radius: 5px;
     background-color: #f3f5f4;
     border: 0;
+}
+
+#notFound
+{
+    display : flex;
+    opacity : 1;
+    position : relative;
+    width: 150px;
+    height: 150px;
+    margin-top: 75px; 
+}
+
+#not-found-text
+{
+    text-align: center;
+    border : 1px solid red;
 }
